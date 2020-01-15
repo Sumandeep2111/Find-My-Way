@@ -31,6 +31,25 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
         mapView.showsUserLocation = true
         mapView.delegate = self
    
+        let latitude:CLLocationDegrees = 43.64
+              let longitude:CLLocationDegrees = -79.38
+              
+              //define delta latitude and longitude
+              let latDelta:CLLocationDegrees = 0.05
+              let longDelta:CLLocationDegrees = 0.05
+              
+              //define span
+              let span = MKCoordinateSpan(latitudeDelta:latDelta,longitudeDelta:longDelta)
+              
+              //define location
+              
+              let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+              //define region
+              
+              let region = MKCoordinateRegion(center: location, span: span)
+            
+        mapView.setRegion(region, animated: true)
+        
         locatioManager.desiredAccuracy = kCLLocationAccuracyBest
             locatioManager.requestWhenInUseAuthorization()
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapping))
@@ -51,7 +70,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
     @IBAction func ZoomOut(_ sender: UIButton) {
         
         let sourceCoordinate = mapView.userLocation.coordinate
-        let region = MKCoordinateRegion(center: sourceCoordinate, latitudinalMeters: 800000*2, longitudinalMeters: 800000*2)
+        let region = MKCoordinateRegion(center: sourceCoordinate, latitudinalMeters: 800*2, longitudinalMeters: 800*2)
         mapView.setRegion(region, animated: true)
     }
     
@@ -108,10 +127,19 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
         switch segmentController.selectedSegmentIndex {
         case 0:
             destinationCoordinate.transportType = .walking
+            for overlay in mapView.overlays {
+                       mapView.removeOverlay(overlay)
+            }
         case 1:
             destinationCoordinate.transportType = .automobile
+            for overlay in mapView.overlays {
+                       mapView.removeOverlay(overlay)
+            }
         default:
             destinationCoordinate.transportType = .walking
+            for overlay in mapView.overlays {
+                       mapView.removeOverlay(overlay)
+            }
         }
         
        // destinationCoordinate.transportType = .automobile
