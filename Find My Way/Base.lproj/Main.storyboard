@@ -45,6 +45,18 @@
                                     <segment title="AutoMobile"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5M-cQ-UUI">
+                                <rect key="frame" x="329" y="156" width="73" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Zoom Out">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ZoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7VD-H4-nDm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -62,6 +74,7 @@
                     <connections>
                         <outlet property="mapView" destination="WOR-PR-6Cv" id="Aaa-nQ-SDW"/>
                         <outlet property="segmentController" destination="3CH-Lr-OQx" id="AUM-Jf-7br"/>
+                        <outlet property="zoomout" destination="m5M-cQ-UUI" id="1Vw-ui-Evu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

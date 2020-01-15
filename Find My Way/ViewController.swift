@@ -16,6 +16,9 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    
+    @IBOutlet weak var zoomout: UIButton!
+    
     var locatioManager = CLLocationManager()
     var places = [Place]()
     var tempTap = 1
@@ -44,7 +47,14 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
            let polyline = MKPolyline(coordinates: locations, count: locations.count)
            mapView.addOverlay(polyline)
        }
-
+    
+    @IBAction func ZoomOut(_ sender: UIButton) {
+        
+        let sourceCoordinate = mapView.userLocation.coordinate
+        let region = MKCoordinateRegion(center: sourceCoordinate, latitudinalMeters: 800000*2, longitudinalMeters: 800000*2)
+        mapView.setRegion(region, animated: true)
+    }
+    
     
     
     @objc func tapping(gesture:UITapGestureRecognizer){
