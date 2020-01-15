@@ -15,6 +15,8 @@
 		9B9C0B9B23CE641A00C85BB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C0B9923CE641A00C85BB3 /* LaunchScreen.storyboard */; };
 		9B9C0BA623CE641B00C85BB3 /* Find_My_WayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C0BA523CE641B00C85BB3 /* Find_My_WayTests.swift */; };
 		9B9C0BB123CE641B00C85BB3 /* Find_My_WayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C0BB023CE641B00C85BB3 /* Find_My_WayUITests.swift */; };
+		9B9C0BBF23CE682600C85BB3 /* locationButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B9C0BBE23CE682600C85BB3 /* locationButton@3x.png */; };
+		9B9C0BC123CE805900C85BB3 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9C0BC023CE805900C85BB3 /* Places.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9B9C0BAC23CE641B00C85BB3 /* Find My WayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find My WayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B9C0BB023CE641B00C85BB3 /* Find_My_WayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Find_My_WayUITests.swift; sourceTree = "<group>"; };
 		9B9C0BB223CE641B00C85BB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9C0BBE23CE682600C85BB3 /* locationButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "locationButton@3x.png"; sourceTree = "<group>"; };
+		9B9C0BC023CE805900C85BB3 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		9B9C0B8D23CE641700C85BB3 /* Find My Way */ = {
 			isa = PBXGroup;
 			children = (
+				9B9C0BBE23CE682600C85BB3 /* locationButton@3x.png */,
 				9B9C0B8E23CE641700C85BB3 /* AppDelegate.swift */,
 				9B9C0B9023CE641700C85BB3 /* SceneDelegate.swift */,
 				9B9C0B9223CE641700C85BB3 /* ViewController.swift */,
@@ -106,6 +111,7 @@
 				9B9C0B9723CE641A00C85BB3 /* Assets.xcassets */,
 				9B9C0B9923CE641A00C85BB3 /* LaunchScreen.storyboard */,
 				9B9C0B9C23CE641A00C85BB3 /* Info.plist */,
+				9B9C0BC023CE805900C85BB3 /* Places.swift */,
 			);
 			path = "Find My Way";
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9C0BBF23CE682600C85BB3 /* locationButton@3x.png in Resources */,
 				9B9C0B9B23CE641A00C85BB3 /* LaunchScreen.storyboard in Resources */,
 				9B9C0B9823CE641A00C85BB3 /* Assets.xcassets in Resources */,
 				9B9C0B9623CE641700C85BB3 /* Main.storyboard in Resources */,
@@ -262,6 +269,7 @@
 				9B9C0B9323CE641700C85BB3 /* ViewController.swift in Sources */,
 				9B9C0B8F23CE641700C85BB3 /* AppDelegate.swift in Sources */,
 				9B9C0B9123CE641700C85BB3 /* SceneDelegate.swift in Sources */,
+				9B9C0BC123CE805900C85BB3 /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
